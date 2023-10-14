@@ -81,40 +81,55 @@ def img_segment(img, sorted_contours_lines):
                                  "input_sentences")
     path = os.path.abspath(os.path.join(current_directory, relative_path))
 
-    shutil.rmtree(path)
-    os.mkdir(path)
-
-    df=pd.DataFrame(columns=['Binary_img'])
+    df = pd.DataFrame()
 
     for idx, ctr in enumerate(sorted_contours_lines):
         x, y, w, h = cv2.boundingRect(ctr)
         if h > 20:
-            roi = img[y:y + h,
-                  x:x + w]  # Extract the ROI from the original image
+            roi = img[y:y + h, x:x + w]  # Extract the ROI from the original
+            # image
             # Save the ROI as a separate image
-            #cv2.imwrite(os.path.join(path, f'roi_{idx}.jpg'), roi)
-
+            cv2.imwrite(os.path.join(path, "input_lines_in_jpg", f'roi'
+                                                                 f'_{idx}.jpg'), roi)
+            df_row = {os.path.join("input_sentences", "input_lines_in_jpg",
+                                   f'roi_{idx}.jpg')}
+            df = pd.concat([df, pd.DataFrame([df_row])], ignore_index=True)
 
             # Alternatively, create pandas dataframe, then convert dataframe
             # to csv file to input for handwritten to digital text model
-            grayed_img = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
-            _, binary_img = cv2.threshold(grayed_img, 128, 255, cv2.THRESH_BINARY)
-            binary_flat=binary_img.flatten()
-            df_row={'Binary': [''.join(map(str, binary_flat))]}
-            df = pd.concat([df, pd.DataFrame([df_row])], ignore_index=True)
+            # grayed_img = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
+
+            # _, binary_img = cv2.threshold(grayed_img, 128, 255,
+            #                              cv2.THRESH_BINARY)
+
+            # binary_flat = binary_img.flatten()
+
+            # df_row = {'Binary': [''.join(map(str, binary_flat))]}
+            # df = pd.concat([df, pd.DataFrame([df_row])], ignore_index=True)
 
             # Optionally, you can also display the ROI
-            #cv2.imshow(f'ROI {idx}', roi)
+            cv2.imshow(f'ROI {idx}', roi)
 
     # Wait for a key press and close all OpenCV windows
     cv2.destroyAllWindows()
-    df.to_csv(path, index=False)
+    print(df)
+    new_csv = os.path.join(path, 'input_img_paths.csv')
+    df.to_csv(new_csv, index=False)
 
-if __name__ == "__main__":
+    # shutil.rmtree(path)
+    # os.mkdir(path)
+
+
+def start_line_seg():
     img = read_file()
     img_resized = resizing(img)
     img_enhanced = img_enhance(img_resized)
-    img_dilation = img_dilation(img_enhanced)
-    contours = find_contours(img_dilation)
-    # ls.segment(img_resized,contours)
+    img_dilated = img_dilation(img_enhanced)
+    contours = find_contours(img_dilated)
     img_segment(img_resized, contours)
+
+
+"""
+if __name__ == "__main__":
+    start_line_seg()
+"""

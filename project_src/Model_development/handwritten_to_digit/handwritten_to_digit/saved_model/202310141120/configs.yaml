@@ -1,9 +1,0 @@
-batch_size: 32
-height: 96
-learning_rate: 0.0005
-max_text_length: 73
-model_path: handwritten_to_digit/saved_model\202310141120
-train_epochs: 1000
-train_workers: 20
-vocab: KOeJDH!(; ak350PGtA,nxwULc9:YBVfds1"Iz?R'gC&yQWpMS.-i#2uvm4Ej8rb)6hTq7ZlFoN
-width: 1408
