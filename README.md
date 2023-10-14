@@ -18,6 +18,11 @@
     like Python, Flask, TensorFlow, and OpenCV
     To use the website, simply upload a jpg file, hit the generate button,
     and watch the magic happen!
+
+<div align=center>
+<img src=>
+</div>
+
 ## AI Foundation
     We used a combination of CNN, RNN, and CTC loss to predict the handwritten text
 ## Page Design
@@ -28,11 +33,12 @@
 > This project uses deep learning related libraries, go check them out if 
 > you want to modify the code
 ```
-pip install tensorflow==2.8.0
+pip install mltu
 pip install numpy
 pip install matplotlib
 pip install opencv-python
 pip install Flask
+pip install pillow
 ```
 2. Clone the original files in git bash
 ```
@@ -42,9 +48,6 @@ git clone https://github.com/FywOo02/ScriptScan-Handwritten-Paragraph-Recognitio
 ```
 python start.py
 ```
-<div align=center>
-<img src=>
-</div>
 
 
 ## File Descriptions
