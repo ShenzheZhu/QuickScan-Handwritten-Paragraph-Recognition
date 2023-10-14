@@ -10,15 +10,20 @@
 ![Deep Learning](https://badgen.net/badge/DeepLearning/Tensorflow/red?)
 ![Back-end](https://badgen.net/badge/Back-end/Flask/yellow?)
 ![Front-end](https://badgen.net/badge/Front-end/HTML&CSS/pink?)
-![Language](https://badgen.net/badge/Language/English/green?)
 
 
-## What is this Project?
+## Introduction to QuickScan
+    QuickScan is a web application that quickly scans handwritten text and converts them 
+    to digital text. The process includes front-end tools like HTML, CSS, and back-end tools
+    like Python, Flask, TensorFlow, and OpenCV
+    To use the website, simply upload a jpg file, hit the generate button,
+    and watch the magic happen!
+## AI Foundation
+    We used a combination of CNN, RNN, and CTC loss to predict the handwritten text
+## Page Design
 
-## What is the structure of this CNN model？
 
-
-## How can I use the recognizer?
+## How can I use the QuickScan?
 1. Install the related libraries
 > This project uses deep learning related libraries, go check them out if 
 > you want to modify the code

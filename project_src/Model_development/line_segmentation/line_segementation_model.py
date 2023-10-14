@@ -124,6 +124,7 @@ def start_line_seg():
     img_enhanced = img_enhance(img_resized)
     img_dilated = img_dilation(img_enhanced)
     contours = find_contours(img_dilated)
+    # segment(img_resized, contours)
     img_segment(img_resized, contours)
 
 
