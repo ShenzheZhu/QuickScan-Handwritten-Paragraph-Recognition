@@ -4,14 +4,12 @@
 # @Author  : FywOo02
 # @FileName: test.py
 # @Software: PyCharm
-import cv2
-
-#code modifications for line segmentation
-img2 = img.copy()
-
-for ctr in sorted_contours_lines:
-
-    x,y,w,h = cv2.boundingRect(ctr)
-    cv2.rectangle(img2, (x,y), (x+w, y+h), (40, 100, 250), 2)
-
-plt.imshow(img2);
+import os
+current_directory = os.path.dirname(__file__)
+print(current_directory)
+# 构建相对路径，从当前脚本所在的目录到图像的路径
+relative_path = os.path.join( "..", "handwritten_to_digit", "input_sentences")
+print(relative_path)
+# 获取图像的绝对路径
+image_path = os.path.abspath(os.path.join(current_directory, relative_path))
+print(image_path)

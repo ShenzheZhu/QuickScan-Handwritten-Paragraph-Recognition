@@ -13,9 +13,11 @@ import shutil
 
 
 def read_file():
-    path = "E:\Computer Science\Project\hackvalley\src\connectivity\src_image\sample.jpg"  # your absolute path of sample
+    current_directory = os.path.dirname(__file__)
+    relative_path = os.path.join("..", "..", "connectivity", "src_image", "sample.jpg")
+    image_path = os.path.abspath(os.path.join(current_directory, relative_path))
 
-    img = cv2.imread(path)
+    img = cv2.imread(image_path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
     return img
@@ -68,7 +70,10 @@ def segment(img, contours):
 
 
 def img_segment(img, sorted_contours_lines):
-    path = "E:\Computer Science\Project\hackvalley\src\model\handwritten_to_digit\input_sentences"
+    current_directory = os.path.dirname(__file__)
+    relative_path = os.path.join( "..", "handwritten_to_digit", "input_sentences")
+    path = os.path.abspath(os.path.join(current_directory, relative_path))
+
     shutil.rmtree(path)
     os.mkdir(path)
 
@@ -84,3 +89,12 @@ def img_segment(img, sorted_contours_lines):
 
     # Wait for a key press and close all OpenCV windows
     cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+    img = read_file()
+    img_resized = resizing(img)
+    img_enhanced = img_enhance(img_resized)
+    img_dilation = img_dilation(img_enhanced)
+    contours = find_contours(img_dilation)
+    # ls.segment(img_resized,contours)
+    img_segment(img_resized,contours)
