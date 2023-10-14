@@ -14,7 +14,8 @@ import shutil
 
 def read_file():
     current_directory = os.path.dirname(__file__)
-    relative_path = os.path.join("..", "..", "connectivity", "src_image", "sample.jpg")
+    relative_path = os.path.join("..", "..", "connectivity", "src_image",
+                                 "sample.jpg")
     image_path = os.path.abspath(os.path.join(current_directory, relative_path))
 
     img = cv2.imread(image_path)
@@ -55,8 +56,11 @@ def img_dilation(img):
 
 
 def find_contours(img):
-    (contours, heirarchy) = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
-    sorted_contours_lines = sorted(contours, key=lambda ctr: cv2.boundingRect(ctr)[1])  # (x, y, w, h)
+    (contours, heirarchy) = cv2.findContours(img, cv2.RETR_EXTERNAL,
+                                             cv2.CHAIN_APPROX_NONE)
+    sorted_contours_lines = sorted(contours,
+                                   key=lambda ctr: cv2.boundingRect(ctr)[
+                                       1])  # (x, y, w, h)
     return sorted_contours_lines
 
 
@@ -71,7 +75,8 @@ def segment(img, contours):
 
 def img_segment(img, sorted_contours_lines):
     current_directory = os.path.dirname(__file__)
-    relative_path = os.path.join( "..", "handwritten_to_digit", "input_sentences")
+    relative_path = os.path.join("..", "handwritten_to_digit",
+                                 "input_sentences")
     path = os.path.abspath(os.path.join(current_directory, relative_path))
 
     shutil.rmtree(path)
@@ -90,6 +95,7 @@ def img_segment(img, sorted_contours_lines):
     # Wait for a key press and close all OpenCV windows
     cv2.destroyAllWindows()
 
+
 if __name__ == "__main__":
     img = read_file()
     img_resized = resizing(img)
@@ -97,4 +103,4 @@ if __name__ == "__main__":
     img_dilation = img_dilation(img_enhanced)
     contours = find_contours(img_dilation)
     # ls.segment(img_resized,contours)
-    img_segment(img_resized,contours)
+    img_segment(img_resized, contours)
