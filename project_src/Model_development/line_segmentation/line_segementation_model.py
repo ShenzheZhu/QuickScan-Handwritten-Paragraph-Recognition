@@ -89,10 +89,8 @@ def img_segment(img, sorted_contours_lines):
             roi = img[y:y + h, x:x + w]  # Extract the ROI from the original
             # image
             # Save the ROI as a separate image
-            cv2.imwrite(os.path.join(path, "input_lines_in_jpg", f'roi'
-                                                                 f'_{idx}.jpg'), roi)
-            df_row = {os.path.join("input_sentences", "input_lines_in_jpg",
-                                   f'roi_{idx}.jpg')}
+            cv2.imwrite(os.path.join(path, "input_lines_in_jpg", f'roi'f'_{idx}.jpg'), roi)
+            df_row = {os.path.join(path, "input_lines_in_jpg", f'roi_{idx}.jpg')}
             df = pd.concat([df, pd.DataFrame([df_row])], ignore_index=True)
 
             # Alternatively, create pandas dataframe, then convert dataframe
@@ -129,7 +127,7 @@ def start_line_seg():
     img_segment(img_resized, contours)
 
 
-"""
+
 if __name__ == "__main__":
     start_line_seg()
-"""
+

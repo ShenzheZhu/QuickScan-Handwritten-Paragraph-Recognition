@@ -27,13 +27,14 @@ def startPrediction():
     path_connect = os.path.abspath(os.path.join(current_directory, output_path))
 
     # 3rd path to saved_model folder to retrieve config.yaml
-    conf_path = os.path.join("saved_model", "configs.yaml")
+    temp_path = os.path.join("saved_model", "configs.yaml")
+    path_config = os.path.abspath(os.path.join(current_directory, temp_path))
     # path_config=os.path.abspath(os.path.join(current_directory, conf_path))
 
     # clear contents in output.txt
     open(os.path.join(path_connect, "output.txt"), "w").close()
 
-    configs = BaseModelConfigs.load(conf_path)
+    configs = BaseModelConfigs.load(path_config)
 
     model = ImageToWordModel(model_path=configs.model_path,
                              char_list=configs.vocab)
@@ -44,6 +45,7 @@ def startPrediction():
     f = open(os.path.join(path_connect, "output.txt"), "w")
     for image_path in tqdm(df):
         new_img = image_path[0]
+        print(new_img)
         image = cv2.imread(new_img)
         prediction_text = model.predict(image)
         f.write(prediction_text + '\n')
@@ -78,7 +80,7 @@ class ImageToWordModel(OnnxInferenceModel):
         return text
 
 
-"""
+
 if __name__ == "__main__":
     startPrediction()
-"""
+
