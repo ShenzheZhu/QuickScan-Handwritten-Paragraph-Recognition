@@ -28,7 +28,7 @@
 > This project uses deep learning related libraries, go check them out if 
 > you want to modify the code
 ```
-pip install tensorflow==2.12.0
+pip install tensorflow==2.8.0
 pip install numpy
 pip install matplotlib
 pip install opencv-python
