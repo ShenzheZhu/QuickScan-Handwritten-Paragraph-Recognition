@@ -1,4 +1,4 @@
-# ScriptScan-Handwritten-Paragraph-Recognition
+# QuickScan-Handwritten-Paragraph-Recognition
 > OpenCV and TensorFlow for model deployment, combined with Flask for web 
 > development and HTML,CSS for front-end work, to enable Handwritten Paragraph 
 > Recognition with web-based accessibility.
