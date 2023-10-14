@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2023/10/13 18:34
 # @Author  : FywOo02
-# @FileName: Line_Segmentation.py
+# @FileName: line_segmentation_model.py
 # @Software: PyCharm
 import tensorflow as tf
 import cv2
