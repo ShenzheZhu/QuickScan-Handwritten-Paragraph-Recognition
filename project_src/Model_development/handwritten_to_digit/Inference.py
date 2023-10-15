@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Time    : 2023/10/13 20:34
+# @Author  : Cho Zhu/ Owen Sun
+# @FileName: Inference.py
+# @Software: PyCharm
+
 import shutil
 import cv2
 import typing
