@@ -2,7 +2,7 @@ batch_size: 32
 height: 96
 learning_rate: 0.0005
 max_text_length: 73
-model_path: 'D:\ComputerScience\Python\ScriptScan-Handwritten-Paragraph-Recognition\project_src\Model_development\handwritten_to_digit\saved_model'
+model_path: 'saved_model'
 train_epochs: 1000
 train_workers: 20
 vocab: '''3.FR20JWIe8CyBowxTV5rgOYQ,ipPcqDGnMAK(Eb6)fH:"9LlUt;jsz m4&1#kZ-adNhvu7!S?'

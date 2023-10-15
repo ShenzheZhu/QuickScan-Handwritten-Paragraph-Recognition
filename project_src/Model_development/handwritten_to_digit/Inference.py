@@ -30,12 +30,16 @@ def startPrediction():
     path_config = os.path.abspath(os.path.join(current_directory, temp_path))
     # path_config=os.path.abspath(os.path.join(current_directory, conf_path))
 
+    # 3rd path to saved_model folder to retrieve config.yaml
+    temp1_path = os.path.join("saved_model")
+    path_model = os.path.abspath(os.path.join(current_directory, temp1_path))
+
     # clear contents in output.txt
     open(os.path.join(path_connect, "output.txt"), "w").close()
 
     configs = BaseModelConfigs.load(path_config)
 
-    model = ImageToWordModel(model_path=configs.model_path,
+    model = ImageToWordModel(model_path=path_model,
                              char_list=configs.vocab)
 
     df = pd.read_csv(os.path.join(path_input, "input_img_paths.csv")).values.tolist()
