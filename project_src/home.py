@@ -1,12 +1,11 @@
 from PIL.Image import Image
 from flask import Flask, render_template, request, redirect, url_for
 
-from werkzeug.utils import secure_filename
+
 import os
 import shutil
 
 import secrets
-
 
 import sys
 

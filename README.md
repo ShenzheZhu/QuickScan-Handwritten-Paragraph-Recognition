@@ -78,15 +78,19 @@ pip install opencv-python
 pip install Flask
 pip install pillow
 pip install tqdm
+pip install librosa
 ```
 2. Clone the original files in git bash
 ```
 git clone https://github.com/FywOo02/ScriptScan-Handwritten-Paragraph-Recognition.git
 ```
-3. Run the start.py, and try that!
+3. Run the home.py, and access the local server address to try it!
 ```
-python start.py
+python project_src/home.py
 ```
+<div align=center>
+<img src="readme_file_src/local_server.png">
+</div>
 
 
 ## File Descriptions

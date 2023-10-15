@@ -1,0 +1,9 @@
+mltu
+numpy
+matplotlib
+pandas
+opencv-python
+Flask
+pillow
+tqdm
+librosa
