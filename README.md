@@ -22,13 +22,25 @@
 
 Enjoy the seamless experience of converting handwritten text to digital effortlessly with QuickScan!
 
-<div align=center>
-<img src=readme_file_src/quickscan_icon.jpg> 
-</div>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="readme_file_src/quickscan_icon.jpg">
+    <br>
+    <div style="color:orange;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">Designed By Laurian Li</div>
+</center>
+
+
+## Tech Stack
+  - Back-end: Python(Spark, OpenCV, Tensorflow)
+  - Front-end: HTML, CSS, JavaScript
 
 ## Machine Learning Model Architecture
 - The pipeline consists of 2 steps: Image Segmentation and line prediction.
-### Image Segmentation
+### 1. Image Segmentation
 - The input consists of a jpg image with dimensions width x height x 3 channel (RGB), and it contains paragraph(s) of handwritten text.
 <div align=center>
 <img src="readme_file_src\original_photo.png"> 
@@ -42,26 +54,40 @@ Enjoy the seamless experience of converting handwritten text to digital effortle
 <img src="readme_file_src\opencv_rectangle.png">
 </div>
     
-### Sentence Line Prediction
+### 2. Sentence Line Prediction
 - The input of this section is taken from the .csv output of image segmentation.
 - The model will predict the line of handwritten text from each row of the .csv file.
 - To predict the handwritten text, we trained a machine learning model with TensorFlow.
   - We used two neural networks, CNN, which is used to extract key features from the images and RNN, which is responsible for processing the extracted features and make predictions.
   - Also, by utilizing CTC(Connectionist Temporal Classification) as our loss function, the model will update to reduce the disparity between the estimated values and the actual labels.
-- The recognized text from model is returned as prediction output.
-
-
-
 <div align=center>
 <img src="readme_file_src/CNN_LSTM.png">
 </div>
 
-## Web Design
+- The recognized text from model is returned as prediction output.
+<div align=center>
+<img src="readme_file_src/output.png">
+</div>
+
+
+## Web Development Architecture
+### 1. Interactive File Upload
+JavaScript enhances user interaction by enabling real-time file upload updates. 
+Users see an immediate change in the displayed image when they select a file for conversion, 
+providing a responsive and engaging experience.
 
 <div align=center>
 <img src="readme_file_src/page_view.png">
 </div>
 
+### 2. Loader Page 
+The loading page, created using a combination of HTML, CSS, and JavaScript, effectively communicates the progress 
+of text recognition. Users are provided with a visual indicator that their document is 
+being processed, maintaining engagement.
+
+<div align=center>
+<img src="readme_file_src/page_view.png">
+</div>
 
 
 
@@ -96,11 +122,16 @@ python project_src/home.py
 ## File Descriptions
 ```
 ├── project_src
+    ├── Model_development 
+        ├── handweitten_to_digit    # place to do Nerual Network model 
+        ├── line_segmentation       # place to do OpenCV operations
+    ├── static                      # place to save temp data files and CSS files
+    ├── templates                   # place to save HTML files 
+    ├── home.py                     # @@place to start the ScriptScan@@
 ├── readme_file_src
-├── Environments.txt # environments needed to run the program
+├── Environments.txt                # environments needed to run the program
 ├── LICENSE.txt 
-├── README.md
-├── start.py # @@place to start the recognition@@
+├── README.md 
 ```
 
 ## Contributor
