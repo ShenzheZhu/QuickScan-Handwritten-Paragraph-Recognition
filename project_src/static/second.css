@@ -27,8 +27,9 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #333333;
+    background-image: linear-gradient(to right, #344e41ff, #a3b18aff);
           transition: opacity 0.75s, visibility 0.75s;
+          z-index: 100;
         }
 
         .loader--hidden {
@@ -93,6 +94,14 @@
     width:auto;
     padding: 0;
     margin: 0;
+      opacity: 100%;
+      transition: opacity 0.3s;
+
+
+  }
+  .logo1:hover{
+    opacity: 50%;
+      transition: opacity 0.3s;
 
 
   }
@@ -116,18 +125,37 @@
     word-break: break-all;
   }
 
+  .copy2 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #344e41ff;
+
+      border: 3px solid;
+      padding: 0.25em 0.5em;
+      box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+      position: relative;
+      background-color: #FFFFFF;
+      user-select: none;
+      -webkit-user-select: none;
+
+  }
+
   .copy{
       font-family: "Open Sans", sans-serif;
       font-size: 16px;
       letter-spacing: 2px;
       text-decoration: none;
       text-transform: uppercase;
-      color: #dddddd;
+      color: #344e41ff;
       cursor: pointer;
       border: 3px solid;
       padding: 0.25em 0.5em;
       box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
       position: relative;
+      background-color: #FFFFFF;
       user-select: none;
       -webkit-user-select: none;
       touch-action: manipulation;

@@ -54,8 +54,8 @@ def index():
                 file = convertJPG(file)
             file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], "sample.jpg"))
 
-            #start_line_seg()
-            #startPrediction()
+            start_line_seg()
+            startPrediction()
             return redirect(url_for('loading'))
         return render_template('index.html')
 

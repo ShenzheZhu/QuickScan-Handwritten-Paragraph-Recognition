@@ -30,13 +30,18 @@
         <a href="{{ url_for('index')}}"><img src="{{ url_for('static',filename='logo1.png') }}" class="logo1"></a>
     </div>
 
-    <button onclick="copyText()">Copy</button>
+
 
     <div class="display_panel">
-    <img src="{{ url_for('static',filename='src_image/sample.jpg') }}" class="image">
+        <div class ="copy2">Input File:</div>
+        <div class ="copy2">Output Text:</div>
+    <div class ="copy2"><img src="{{ url_for('static',filename='src_image/sample.jpg') }}" class="image"></div>
+        <div class="copy2">
+            <button class="copy" onclick="copyText()">Copy</button>
         <div class="textdisplay" id="myText">>
       {{ file_content }}
         </div>
+            </div>
     </div>
 
 

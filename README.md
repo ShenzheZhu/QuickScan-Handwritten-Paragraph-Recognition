@@ -94,6 +94,16 @@ being processed, maintaining engagement.
 <img src="readme_file_src/page_view.png">
 </div>
 
+### 3. Quick Copy
+QuickScan simplifies the process of copying the converted prediction text to 
+your clipboard with the "Quick Copy" feature. This feature enhances user
+convenience and expedites the use of digitized text in various 
+applications and documents.
+
+<div align=center>
+<img src="readme_file_src/page_view.png">
+</div>
+
 
 
 ## How can I use the QuickScan?
@@ -132,6 +142,7 @@ python project_src/home.py
         ├── line_segmentation       # place to do OpenCV operations
     ├── static                      # place to save temp data files and CSS files
     ├── templates                   # place to save HTML files 
+    ├── test_image                  # place to save the .jpg file for QuickScan test
     ├── home.py                     # @@place to start the ScriptScan@@
 ├── readme_file_src
 ├── Environments.txt                # environments needed to run the program
