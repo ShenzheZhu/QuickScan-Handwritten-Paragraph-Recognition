@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Roboto+Condensed&family=Shadows+Into+Light+Two&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Shadows+Into+Light+Two&display=swap');
 :root {
@@ -16,12 +16,12 @@
   --hunter-green: #3a5a40ff;
   --brunswick-green: #344e41ff;
   }
-  
+
   * {
     height:auto;
     box-sizing: border-box;
   }
-  
+
   body {
     margin: 0;
     padding-top: 100px;
@@ -57,10 +57,10 @@
 
   .description{
     font-size:2rem;
-    font-family: 'Love Ya Like A Sister', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
 
   }
-  
+
   .app {
     height: 100vh;
     display: flex;
@@ -68,24 +68,24 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .form-section {
     padding: 15px 0 0 15px;
     width: 25%;
     color: var(--light);
     flex-shrink: 0;
   }
-  
+
   .images-section {
     padding: 0;
     max-width: 75%;
     height: auto;
-    
-    
+
+
     display: flex;
-    
+
   }
-  
+
 
 
 /* CSS */
@@ -131,7 +131,7 @@ input[type='file']:disabled {
   cursor: not-allowed;
   opacity: 1;
 }
-  
+
   .images-section #uploaded-image {
     width: 300px;
     min-height: 300px;
@@ -140,19 +140,19 @@ input[type='file']:disabled {
     margin: 3px;
     padding: 3px;
   }
-  
- 
-  
+
+
+
   /* Forms */
   form {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
     align-items: center;
   }
-  
+
  /* input[type='file'] {
     background-color: #FFFFFF;
   border: 1px solid #222222;
@@ -187,26 +187,46 @@ input[type='file']:disabled {
     font-family: 'Love Ya Like A Sister', cursive;
     background-image: linear-gradient(to bottom, var(--white), var(--light));
   }
-  
-  input[type='submit'],
-  button[type='button'] {
-    padding: 13px 20px;
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--white);
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    box-shadow: none;
-    cursor: pointer;
-    background: var(--blue);
-    background-image: linear-gradient(to bottom, var(--blue-light), var(--blue));
-    transition: box-shadow .2s ease;
-    width: 100%;
-    text-align: center;
-  }
-  
-  input[type='submit']:hover,
-  button[type='button']:hover {
-    box-shadow: inset 0 -25px 25px var(--blue-light);
-  }
+
+  input[type='submit'] {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 20px 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+input[type='submit']:hover {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+input[type='submit']:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+input[type='submit']:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}

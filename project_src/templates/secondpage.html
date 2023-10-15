@@ -28,7 +28,9 @@
 
     <div class="display_panel">
     <img src="{{ url_for('static',filename='src_image/sample.jpg') }}" class="image">
-        <div class="textdisplay"></div>
+        <div class="textdisplay">
+      {{ file_content }}
         </div>
+    </div>
 </body>
 </html>

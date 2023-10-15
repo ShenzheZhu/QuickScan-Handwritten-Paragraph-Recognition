@@ -109,3 +109,9 @@
     background-image: linear-gradient(to right, #344e41ff, #a3b18aff);
 
   }
+  .textdisplay{
+    display: flex;
+    white-space: pre-line;
+    word-wrap: break-word;
+    word-break: break-all;
+  }

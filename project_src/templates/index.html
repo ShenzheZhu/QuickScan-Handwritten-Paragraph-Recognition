@@ -11,7 +11,7 @@
     <div class="app">
     <img src="{{ url_for('static', filename='logo1.png') }}" class="logo1">
 
-    <div class="description"> Only one-page document in 'png','jpeg' or 'jpg' format is supported.</div>
+    <div class="description"> Only one-page document in 'jpeg' or 'jpg' format is supported.</div>
 
     <div class="form-section">
         <form action="/" method="POST" enctype="multipart/form-data">
@@ -20,11 +20,11 @@
         </form>
       </div>
       <div class="images-section">
-      
+
         <img id="uploaded-image">
-      
+
     </div>
-    
+
   </div>
   <script>
 
@@ -32,7 +32,18 @@
     var src = URL.createObjectURL(this.files[0])
     document.getElementById('uploaded-image').src = src
   }
-    
+  let input = document.querySelector(".input");
+  let button = document.querySelector(".button");
+  button.disabled= true;
+  input.addEventListener("change", stateHandle);
+
+  function stateHandle() {
+      if (document.querySelector(".input").value === "") {
+          button.disabled = true;
+      } else {
+          button.disabled = false;
+      }
+  }
 
   </script>
 </body>

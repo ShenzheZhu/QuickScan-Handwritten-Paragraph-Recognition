@@ -17,7 +17,7 @@ import time
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secrets.token_hex(16)
 app.config['UPLOAD_FOLDER'] = 'static/src_image'
-
+app.config['TEXT_FOLDER'] = 'static/prediction_text'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 
@@ -59,7 +59,13 @@ def index():
 
 @app.route("/loading")
 def loading():
-    return render_template("secondpage.html")
+    text_file_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['TEXT_FOLDER'], "output.txt")
+    if os.path.exists(text_file_path):
+        with open(text_file_path,'r') as file:
+            file_content = file.read()
+        return render_template("secondpage.html", file_content=file_content)
+    else:
+        return "Text not found"
 
 
 if __name__ == '__main__':
