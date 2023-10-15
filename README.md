@@ -82,7 +82,7 @@ Users see an immediate change in the displayed image when they select a file for
 providing a responsive and engaging experience.
 
 <div align=center>
-<img src="readme_file_src/page_view.png">
+<img src="readme_file_src/page1.png">
 </div>
 
 ### 2. Loader Page 
@@ -91,7 +91,7 @@ of text recognition. Users are provided with a visual indicator that their docum
 being processed, maintaining engagement.
 
 <div align=center>
-<img src="readme_file_src/page_view.png">
+<img src="readme_file_src/page_load.png">
 </div>
 
 ### 3. Quick Copy
@@ -101,7 +101,7 @@ convenience and expedites the use of digitized text in various
 applications and documents.
 
 <div align=center>
-<img src="readme_file_src/page_view.png">
+<img src="readme_file_src/page2.png">
 </div>
 
 
