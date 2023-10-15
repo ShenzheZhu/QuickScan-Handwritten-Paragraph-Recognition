@@ -24,8 +24,27 @@
 </div>
 
 ## AI Foundation
-    We used a combination of CNN, RNN, and CTC loss to predict the handwritten text
-## Page Design
+    To train a machine learning model that predicts the handwritten We used a two neural networks, CNN and RNN, combined with a CTC loss function to predict the handwritten text.
+<div align=center>
+<img src="readme_file_src\original_photo.png"> 
+</div>
+
+<div align=center>
+<img src="readme_file_src\opencv_rectangle.png">
+</div>
+
+<div align=center>
+<img src="readme_file_src/CNN_LSTM.png">
+</div>
+
+## Web Design
+
+
+<div align=center>
+<img src=>
+</div>
+
+
 
 
 ## How can I use the QuickScan?
