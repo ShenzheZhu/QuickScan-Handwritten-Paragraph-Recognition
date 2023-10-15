@@ -133,8 +133,8 @@ input[type='file']:disabled {
 }
 
   .images-section #uploaded-image {
-    width: 300px;
-    min-height: 300px;
+    width: 500px;
+    min-height: 500px;
     max-height: auto;
     float: left;
     margin: 3px;

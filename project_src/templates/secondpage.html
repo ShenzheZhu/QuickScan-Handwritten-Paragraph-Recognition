@@ -15,6 +15,11 @@
             document.body.removeChild(loader);
           });
         });
+
+        function copyText() {
+            var textToCopy = document.getElementById("myText").textContent;
+            navigator.clipboard.writeText(textToCopy);
+        }
     </script>
 </head>
 <body>
@@ -22,15 +27,22 @@
 
     </div>
     <div class="header">
-        <img src="{{ url_for('static', filename='logo1.png') }}" class="logo1">
+        <a href="{{ url_for('index')}}"><img src="{{ url_for('static',filename='logo1.png') }}" class="logo1"></a>
     </div>
 
+    <button onclick="copyText()">Copy</button>
 
     <div class="display_panel">
     <img src="{{ url_for('static',filename='src_image/sample.jpg') }}" class="image">
-        <div class="textdisplay">
+        <div class="textdisplay" id="myText">>
       {{ file_content }}
         </div>
     </div>
+
+
+
+
+
+
 </body>
 </html>

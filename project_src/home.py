@@ -1,5 +1,5 @@
-from PIL.Image import Image
-from flask import Flask, render_template, request, redirect, url_for
+from PIL import Image
+from flask import Flask, render_template, request, redirect, url_for,flash
 
 
 import os
@@ -40,21 +40,28 @@ def duplicate_file(source_path, destination_path):
 # index page
 @app.route("/", methods=['GET', 'POST'])
 def index():
+    try:
     # Example usage
     #source_file = None
     #destination_file = os.path.join(app.config["PREVIEW_FOLDER"], "sample.png")
-    if request.method == 'POST':
-        if 'file' not in request.files:
-            return redirect(request.url)
-        file = request.files['file']  # request user input file
-        if file and ('.' in file.filename and file.filename.rsplit('.', 1)[1].lower() == 'png'):
-            file = convertJPG(file)
-        file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], "sample.jpg"))
+        if request.method == 'POST':
+            if 'file' not in request.files:
+                return redirect(request.url)
+            file = request.files['file']# request user input file
+            if file.filename == "":
+                return render_template('index.html')
+            if file and ('.' in file.filename and file.filename.rsplit('.', 1)[1].lower() == 'png'):
+                file = convertJPG(file)
+            file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], "sample.jpg"))
 
-        start_line_seg()
-        startPrediction()
-        return redirect(url_for('loading'))
-    return render_template('index.html')
+            #start_line_seg()
+            #startPrediction()
+            return redirect(url_for('loading'))
+        return render_template('index.html')
+
+    except Exception as e:
+        print(f"Please submit a valid file: {e}")
+        return render_template('index.html')
 
 
 @app.route("/loading")
