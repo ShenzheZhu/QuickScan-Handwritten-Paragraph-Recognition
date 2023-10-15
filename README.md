@@ -13,11 +13,14 @@
 
 
 ## Introduction to QuickScan
--   QuickScan is a web application that quickly scans handwritten text and converts them 
-    to digital text. The process includes front-end tools like HTML, CSS, and back-end tools
-    like Python, Flask, TensorFlow, and OpenCV.
-    To use the website, simply upload a jpg file, hit the generate button,
-    and watch the magic happen!
+-   QuickScan is a powerful web application designed to swiftly convert handwritten text into digital text. This application utilizes a blend of front-end technologies such as HTML and CSS, combined with robust back-end tools like Python, Flask, TensorFlow, and OpenCV.
+###Usage To utilize this web application, follow these simple steps:
+
+1. Upload: Start by uploading a jpg file containing the handwritten text you wish to convert.
+2. Generate: Press the "Generate" button to initiate the conversion process.
+3. Magic Unveiled: Witness the magic as QuickScan transforms the handwritten text into digital format.
+
+Enjoy the seamless experience of converting handwritten text to digital effortlessly with QuickScan!
 
 <div align=center>
 <img src=readme_file_src/quickscan_icon.jpg> 
