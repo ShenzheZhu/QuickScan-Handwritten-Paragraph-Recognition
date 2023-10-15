@@ -15,7 +15,7 @@ import pandas as pd
 
 def read_file():
     current_directory = os.path.dirname(__file__)
-    relative_path = os.path.join("..", "..", "connectivity", "src_image",
+    relative_path = os.path.join("..", "..", "static", "src_image",
                                  "sample.jpg")
     image_path = os.path.abspath(os.path.join(current_directory, relative_path))
 

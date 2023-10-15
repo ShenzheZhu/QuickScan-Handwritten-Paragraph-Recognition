@@ -1,5 +1,4 @@
 import shutil
-
 import cv2
 import typing
 import numpy as np
@@ -23,7 +22,7 @@ def startPrediction():
                                               relative_path))
 
     # 2nd path to connectivity folder for output
-    output_path = os.path.join("..", "..", "Connectivity", "prediction_text")
+    output_path = os.path.join("..", "..", "static", "prediction_text")
     path_connect = os.path.abspath(os.path.join(current_directory, output_path))
 
     # 3rd path to saved_model folder to retrieve config.yaml
