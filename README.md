@@ -1,6 +1,6 @@
 # QuickScan-Handwritten-Paragraph-Recognition
 > OpenCV and TensorFlow for model deployment, combined with Flask for web 
-> development and HTML,CSS for front-end work, to enable Handwritten Paragraph 
+> development and HTML,CSS and JavaScript for front-end work, to enable Handwritten Paragraph 
 > Recognition with web-based accessibility.
 
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/FywOo02/Boston-House-Pricing-Forecast)
@@ -13,7 +13,7 @@
 
 
 ## Introduction to QuickScan
--   QuickScan is a powerful web application designed to swiftly convert handwritten text into digital text. This application utilizes a blend of front-end technologies such as HTML and CSS, combined with robust back-end tools like Python, Flask, TensorFlow, and OpenCV.
+-   QuickScan is a powerful web application designed to swiftly convert handwritten text into digital text. This application utilizes a blend of front-end technologies such as HTML, CSS and JavaScript, combined with robust back-end tools like Python, Flask, TensorFlow, and OpenCV.
 
 ### To use this web application, follow these simple steps:
 
