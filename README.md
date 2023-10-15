@@ -9,12 +9,13 @@
 ![Computer Vision](https://badgen.net/badge/ComputerVision/OpenCV/blue?)
 ![Deep Learning](https://badgen.net/badge/DeepLearning/Tensorflow/red?)
 ![Back-end](https://badgen.net/badge/Back-end/Flask/yellow?)
-![Front-end](https://badgen.net/badge/Front-end/HTML&CSS/pink?)
+![Front-end](https://badgen.net/badge/Front-end/HTML&CSS&JavaScript/pink?)
 
 
 ## Introduction to QuickScan
 -   QuickScan is a powerful web application designed to swiftly convert handwritten text into digital text. This application utilizes a blend of front-end technologies such as HTML and CSS, combined with robust back-end tools like Python, Flask, TensorFlow, and OpenCV.
-###Usage To utilize this web application, follow these simple steps:
+
+### To use this web application, follow these simple steps:
 
 1. Upload: Start by uploading a jpg file containing the handwritten text you wish to convert.
 2. Generate: Press the "Generate" button to initiate the conversion process.
@@ -65,9 +66,13 @@ Enjoy the seamless experience of converting handwritten text to digital effortle
 </div>
 
 - The recognized text from model is returned as prediction output.
+
 <div align=center>
 <img src="readme_file_src/output.png">
 </div>
+
+- Click following link, if you want to train the model by yourself. Please, be careful of the version of Tensorflow and CUDA if you want to train the model by using you GPU.
+- <https://drive.google.com/drive/folders/1c4Nc-Pvrw30cXvWK-bDIztEcYLzaF-dw>
 
 
 ## Web Development Architecture

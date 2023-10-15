@@ -57,7 +57,7 @@
 
   .description{
     font-size:2rem;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Open Sans", sans-serif;
 
   }
 
@@ -90,28 +90,20 @@
 
 /* CSS */
 input[type='file'] {
-  background-color: #FFFFFF;
-  border: 1px solid #222222;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #222222;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-  margin: 20px 0;
-  outline: none;
-  padding: 13px 23px;
-  position: relative;
-  text-align: center;
+  letter-spacing: 2px;
   text-decoration: none;
-  touch-action: manipulation;
-  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  text-transform: uppercase;
+  color: #dddddd;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
   user-select: none;
   -webkit-user-select: none;
-  width: auto;
+  touch-action: manipulation;
 }
 
 input[type='file']:hover {
@@ -120,17 +112,13 @@ input[type='file']:hover {
 }
 
 input[type='file']:active {
-  background-color: #F7F7F7;
-  border-color: #000000;
-  transform: scale(.96);
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
 }
 
-input[type='file']:disabled {
-  border-color: #DDDDDD;
-  color: #DDDDDD;
-  cursor: not-allowed;
-  opacity: 1;
-}
+
+
 
   .images-section #uploaded-image {
     width: 500px;
@@ -153,30 +141,40 @@ input[type='file']:disabled {
     align-items: center;
   }
 
- /* input[type='file'] {
-    background-color: #FFFFFF;
-  border: 1px solid #222222;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #222222;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+ /* <!-- HTML !-->
+<button class="button-54" role="button">Button 54</button>
+
+
+.button-54 {
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
-  padding: 13px 23px;
-  position: relative;
-  text-align: center;
+  letter-spacing: 2px;
   text-decoration: none;
-  touch-action: manipulation;
-  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
   user-select: none;
   -webkit-user-select: none;
-  width: auto;
-  }*/
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+  }
+*/
   input[type='file']::file-selector-button {
     display: none;
     font-weight: bold;
@@ -188,29 +186,21 @@ input[type='file']:disabled {
     background-image: linear-gradient(to bottom, var(--white), var(--light));
   }
 
-  input[type='submit'] {
-  background-color: #FFFFFF;
-  border: 1px solid #222222;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #222222;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+input[type='submit'] {
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-  margin: 20px 0;
-  outline: none;
-  padding: 13px 23px;
-  position: relative;
-  text-align: center;
+  letter-spacing: 2px;
   text-decoration: none;
-  touch-action: manipulation;
-  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  text-transform: uppercase;
+  color: #dddddd;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
   user-select: none;
   -webkit-user-select: none;
-  width: auto;
+  touch-action: manipulation;
 }
 
 input[type='submit']:hover {
@@ -219,14 +209,8 @@ input[type='submit']:hover {
 }
 
 input[type='submit']:active {
-  background-color: #F7F7F7;
-  border-color: #000000;
-  transform: scale(.96);
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
 }
 
-input[type='submit']:disabled {
-  border-color: #DDDDDD;
-  color: #DDDDDD;
-  cursor: not-allowed;
-  opacity: 1;
-}
