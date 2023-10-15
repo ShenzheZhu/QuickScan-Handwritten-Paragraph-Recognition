@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Shadows+Into+Light+Two&display=swap');
+
+:root {
+    --black: #000000;
+    --almost-black: #080708;
+    --blue: #3772FF;
+    --blue-light: #3787ff;
+    --red: #DF2935;
+    --yellow: #FDCA40;
+    --light: #E6E8E6;
+    --white: #FFFFFF;
+    --timberwolf: #dad7cdff;
+  --sage: #a3b18aff;
+  --fern-green: #588157ff;
+  --hunter-green: #3a5a40ff;
+  --brunswick-green: #344e41ff;
+  }
+
+.loader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #333333;
+          transition: opacity 0.75s, visibility 0.75s;
+        }
+
+        .loader--hidden {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .loader::after {
+          content: "";
+          width: 75px;
+          height: 75px;
+          border: 15px solid #dddddd;
+          border-top-color: #588157ff;
+          border-radius: 50%;
+          animation: loading 0.75s ease infinite;
+        }
+
+        @keyframes loading {
+          from {
+            transform: rotate(0turn);
+          }
+          to {
+            transform: rotate(1turn);
+          }
+        }
+
+
+
+
+  * {
+    height:auto;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 200px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--white);
+    background-color: #dad7cdff;
+
+
+
+}
+.display_panel{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px;
+}
+.image{
+    width: 100%;
+    height: auto;
+
+}
+  .logo1{
+    display:flex;
+    height:8rem;
+    width:auto;
+    padding: 0;
+    margin: 0;
+
+
+  }
+  .header{
+    top:0;
+    left:0;
+    right:0;
+    position: relative;
+    display: flex;
+    z-index:4 ;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #344e41ff, #a3b18aff);
+
+  }
