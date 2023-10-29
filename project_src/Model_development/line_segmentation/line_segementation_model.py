@@ -34,7 +34,7 @@ def resizing(img):
         new_width = 888
         new_height = int(new_width / ar)
 
-    img = cv2.resize(img, (new_width, new_height),
+        img = cv2.resize(img, (new_width, new_height),
                      interpolation=cv2.INTER_LINEAR)
     # plt.imshow(img)
     # plt.show()
